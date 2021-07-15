@@ -228,9 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fb4dc35d6be32409f9a213c2622565, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowdownFactor: 0
-  slowdownLength: 2
-  timeManager: {fileID: 116842622}
+  timeScaleKey: 122
+  timeScale: 0.1
 --- !u!4 &116842623
 Transform:
   m_ObjectHideFlags: 0
@@ -1751,7 +1750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe4ddee063026f4db141bc3a4b28ae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeManager: {fileID: 116842622}
 --- !u!1 &2131514417
 GameObject:
   m_ObjectHideFlags: 0

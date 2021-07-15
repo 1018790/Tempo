@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    public float slowdownFactor = 0.5f;
-    public float slowdownLength = 2f;
-    public TimeManager timeManager;
+    public KeyCode timeScaleKey = KeyCode.Z;
+    public float timeScale;
+    bool timeToggle;
+    float defaultTimeScale;
+    float defaultFixedDeltaTime;
 
-    public void DoSlowMotion()
+    void Start()
     {
-        Time.timeScale = slowdownFactor;
+        defaultTimeScale = Time.timeScale;
+        defaultFixedDeltaTime = Time.fixedDeltaTime;
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyUp(timeScaleKey))
         {
-            Debug.Log("SLOW TIME");
-            timeManager.DoSlowMotion();
+            //Reverse the time toggle and change the timeScale
+            timeToggle = !timeToggle;
+            Time.timeScale = timeToggle ? timeScale : defaultTimeScale;
+            Time.fixedDeltaTime = defaultFixedDeltaTime * Time.timeScale;
         }
     }
 }
