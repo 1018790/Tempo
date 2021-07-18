@@ -160,7 +160,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Lucky Panda Studios.Tempo of Life
+    Android: com.LuckyPandaStudios.TempoofLife
     Standalone: com.Lucky Panda Studios.Tempo of Life
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -384,7 +384,7 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - Oculus
-    - None
+    - daydream
   - m_BuildTarget: Standalone
     m_Enabled: 1
     m_Devices:

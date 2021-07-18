@@ -25,4 +25,12 @@ public class TimeManager : MonoBehaviour
             Time.fixedDeltaTime = defaultFixedDeltaTime * Time.timeScale;
         }
     }
+
+    public void ResetTimeScale() {
+        Time.timeScale = 1;
+    }
+
+    public void TimeSlowDown() {
+        Time.timeScale = timeScale;
+    }
 }

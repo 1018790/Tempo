@@ -23,23 +23,23 @@ namespace Liminal.Examples
             var leftInput = GetInput(VRInputDeviceHand.Left);
 
             // Input Examples
-            if (rightInput != null)
-            {
-                if (rightInput.GetButtonDown(VRButton.Back))
-                    Debug.Log("Back button pressed");
+            //if (rightInput != null)
+            //{
+            //    if (rightInput.GetButtonDown(VRButton.Back))
+            //        Debug.Log("Back button pressed");
 
-                if (rightInput.GetButtonDown(VRButton.One))
-                    Debug.Log("Trigger button pressed");
-            }
+            //    if (rightInput.GetButtonDown(VRButton.One))
+            //        Debug.Log("Trigger button pressed");
+            //}
 
-            if (leftInput != null)
-            {
-                if (leftInput.GetButtonDown(VRButton.Back))
-                    Debug.Log("Back button pressed");
+            //if (leftInput != null)
+            //{
+            //    if (leftInput.GetButtonDown(VRButton.Back))
+            //        Debug.Log("Back button pressed");
 
-                if (leftInput.GetButtonDown(VRButton.One))
-                    Debug.Log("Trigger button pressed");
-            }
+            //    if (leftInput.GetButtonDown(VRButton.One))
+            //        Debug.Log("Trigger button pressed");
+            //}
 
             // Any input
             // VRDevice.Device.GetButtonDown(VRButton.One);
