@@ -11,7 +11,7 @@ public enum GameState {
 public class CallibrationManager : MonoBehaviour
 {
     public TimeManager timeManager;
-    public GameObject sun;
+    public SpawnManager spawnManager;
     public enum BreathingState { 
         Inhale,
         Exhale
@@ -32,13 +32,14 @@ public class CallibrationManager : MonoBehaviour
     public float ExhaleTimeAvg;
 
     private float t;
+    private bool isGrowing;
 
     private void Start()
     {
-        sun.SetActive(false);
         gameState = GameState.PreStart;
         CanCalibrate = false;
         InhaleTime = 0;
+        isGrowing = false;
     }
 
     void Update()
@@ -62,19 +63,23 @@ public class CallibrationManager : MonoBehaviour
             }
             else {
                 gameState = GameState.Start;
-                breatheState = BreathingState.Exhale;
             }
         }
 
         if (gameState == GameState.Start) {
+            if (!isGrowing)
+            {
+                spawnManager.SpawnObject();
+                isGrowing = true;
+            }
             InhaleTimeAvg = InhaleTime / 3;
             ExhaleTimeAvg = ExhaleTime / 3;
-            sun.SetActive(true);
             switch (breatheState) {
                 case BreathingState.Inhale:
                     timeManager.TimeSlowDown();
                     if (t < InhaleTimeAvg)
                     {
+                        Debug.Log("Slow time!");
                         t += Time.unscaledDeltaTime;
                     }
                     else

@@ -33,4 +33,6 @@ public class TimeManager : MonoBehaviour
     public void TimeSlowDown() {
         Time.timeScale = timeScale;
     }
+
+    
 }
