@@ -32,77 +32,76 @@ public class CallibrationManager : MonoBehaviour
     public float ExhaleTimeAvg;
 
     private float t;
-    private bool isGrowing;
 
     private void Start()
     {
         gameState = GameState.PreStart;
         CanCalibrate = false;
         InhaleTime = 0;
-        isGrowing = false;
     }
 
     void Update()
     {
         InputSetting();
-        if (CanCalibrate) {
-            if (currentCalibrateTime < calibrateTime)
-            {
+
+        switch (gameState) {
+            case GameState.PreStart:
+                if (CanCalibrate)
+                {
+                    if (currentCalibrateTime < calibrateTime)
+                    {
+                        switch (breatheState)
+                        {
+                            case BreathingState.Inhale:
+                                InhaleTime += Time.deltaTime;
+                                break;
+                            case BreathingState.Exhale:
+                                if (InhaleTime > 0)
+                                {
+                                    ExhaleTime += Time.deltaTime;
+                                }
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        spawnManager.SpawnObject();
+                        gameState = GameState.Start;
+                    }
+                }
+                break;
+            case GameState.Start:
+                InhaleTimeAvg = InhaleTime / 3;
+                ExhaleTimeAvg = ExhaleTime / 3;
                 switch (breatheState)
                 {
                     case BreathingState.Inhale:
-                        InhaleTime += Time.deltaTime;
+                        timeManager.TimeSlowDown();
+                        if (t < InhaleTimeAvg)
+                        {
+                            Debug.Log("Slow time!");
+                            t += Time.unscaledDeltaTime;
+                        }
+                        else
+                        {
+                            t = 0;
+                            breatheState = BreathingState.Exhale;
+                        }
                         break;
                     case BreathingState.Exhale:
-                        if (InhaleTime > 0)
+                        timeManager.ResetTimeScale();
+                        if (t < ExhaleTimeAvg)
                         {
-                            ExhaleTime += Time.deltaTime;
+                            t += Time.unscaledDeltaTime;
+                        }
+                        else
+                        {
+                            t = 0;
+                            breatheState = BreathingState.Inhale;
                         }
                         break;
                 }
-            }
-            else {
-                gameState = GameState.Start;
-            }
-        }
-
-        if (gameState == GameState.Start) {
-            if (!isGrowing)
-            {
-                spawnManager.SpawnObject();
-                isGrowing = true;
-            }
-            InhaleTimeAvg = InhaleTime / 3;
-            ExhaleTimeAvg = ExhaleTime / 3;
-            switch (breatheState) {
-                case BreathingState.Inhale:
-                    timeManager.TimeSlowDown();
-                    if (t < InhaleTimeAvg)
-                    {
-                        Debug.Log("Slow time!");
-                        t += Time.unscaledDeltaTime;
-                    }
-                    else
-                    {
-                        t = 0;
-                        breatheState = BreathingState.Exhale;
-                    }
-                    break;
-                case BreathingState.Exhale:
-                    timeManager.ResetTimeScale();
-                    if (t < ExhaleTimeAvg)
-                    {
-                        t += Time.unscaledDeltaTime;
-                    }
-                    else
-                    {
-                        t = 0;
-                        breatheState = BreathingState.Inhale;
-                    }
-                    break;
-            
-            }
-
+                break;
         }
     }
 

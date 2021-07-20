@@ -14,14 +14,8 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < arrayList.Length; i++)
         {
-            Instantiate(Object, arrayList[i].transform.position, Quaternion.Euler(0, 180, 0));
+            GameObject o = Instantiate(Object, arrayList[i].transform.position, Quaternion.Euler(0, 180, 0));
+            o.transform.SetParent(transform,true);
         }
     }
-  
-    //IEnumerator spawnObject()
-    //{
-    //    Vector3 SpawnPos = new Vector3(Random.Range(xPos.x, xPos.y), 0, Random.Range(zPos.x, zPos.y));
-    //    ObjectCount -= 1;
-    //    yield return new WaitForSeconds(1f);
-    //}
 }
