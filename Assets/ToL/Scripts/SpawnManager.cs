@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject Object;
+    
     public Vector2 xPos;
     public Vector2 zPos;
     public int ObjectCount;
     public GameObject [] arrayList;
+    public GameObject rainSpawner;
+    public GameObject flower;
+    public GameObject rain;
+    public Animator flowerAnim;
 
     public void SpawnObject()
     {
         for (int i = 0; i < arrayList.Length; i++)
         {
-            GameObject o = Instantiate(Object, arrayList[i].transform.position, Quaternion.Euler(0, 180, 0));
-            o.transform.SetParent(transform,true);
+            GameObject f = Instantiate(flower, arrayList[i].transform.position, Quaternion.Euler(0, 180, 0));
+            f.transform.SetParent(transform,true);
+            if (flowerAnim.GetCurrentAnimatorStateInfo(0).IsName("Growing"))
+            {
+                GameObject r = Instantiate(rain, rainSpawner.transform.position, Quaternion.Euler(0, 0, 0));
+                r.transform.SetParent(transform, true);
+            }
         }
     }
 }
