@@ -65,7 +65,6 @@ public class CallibrationManager : MonoBehaviour
                     }
                     else
                     {
-                        spawnManager.SpawnObject();
                         gameState = GameState.Start;
                     }
                 }

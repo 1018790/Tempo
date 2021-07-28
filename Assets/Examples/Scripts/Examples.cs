@@ -21,7 +21,6 @@ namespace Liminal.Examples
 
             var rightInput = GetInput(VRInputDeviceHand.Right);
             var leftInput = GetInput(VRInputDeviceHand.Left);
-
             // Input Examples
             //if (rightInput != null)
             //{
