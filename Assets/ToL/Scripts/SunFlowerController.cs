@@ -29,6 +29,7 @@ public class SunFlowerController : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
             Debug.Log("ss");
             OnCompletedGrowing?.Invoke();
+            this.enabled = false;
         }
     }
 }
