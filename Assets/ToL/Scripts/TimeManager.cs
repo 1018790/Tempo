@@ -26,10 +26,11 @@ public class TimeManager : MonoBehaviour
     [SerializeField]
     private float currentExhaleTime;
 
-    public float transitionSpeed = 0.1f;
+    public float timeTransitionSpeed = 0.1f;
 
-    [SerializeField]
-    private Animator[] flowerAnims;
+    [Space,Header("FlowerGrowSpeed")]
+    public float flowerGrowSpeed = 1f;
+    public float flowerDeGrowSpeed = -1f;
 
     
     void Update()
@@ -40,7 +41,7 @@ public class TimeManager : MonoBehaviour
                     if (currentInhaleTime < inhaleTime)
                     {
                         currentInhaleTime += Time.unscaledDeltaTime;
-                        InhaleTimeScale();
+                        InhaleTimeControl();
                     }
                     else {
                         if (canHold)
@@ -54,7 +55,7 @@ public class TimeManager : MonoBehaviour
                     if (currentHoldTime < holdTime)
                     {
                         currentHoldTime += Time.unscaledDeltaTime;
-                        HoldTimeScale();
+                        HoldTimeControl();
                     }
                     else {
                         state = BreathingState.Exhale;
@@ -65,7 +66,7 @@ public class TimeManager : MonoBehaviour
                     if (currentExhaleTime < exhaleTime)
                     {
                         currentExhaleTime += Time.unscaledDeltaTime;
-                        ResetTimeScale();
+                        ExhaleTimeControl();
                     }
                     else {
                         state = BreathingState.Inhale;
@@ -84,31 +85,22 @@ public class TimeManager : MonoBehaviour
         canBreathe = true;
     }
 
-    public void ResetTimeScale() {
+    public void ExhaleTimeControl() {
         if (Time.timeScale < 1) {
-            Time.timeScale += Time.unscaledDeltaTime * transitionSpeed;
-            foreach (var anim in flowerAnims)
-            {
-                anim.SetFloat("Speed", 1);
-            }
+            Time.timeScale += Time.unscaledDeltaTime * timeTransitionSpeed;
         }
     }
 
-    public void InhaleTimeScale() {
+    public void InhaleTimeControl() {
         if (Time.timeScale > inhaleTimeScale) {
-            Time.timeScale -= Time.unscaledDeltaTime * transitionSpeed;
-            foreach (var anim in flowerAnims) {
-                if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.2f) {
-                    anim.SetFloat("Speed",-1.5f);
-                }
-            }
+            Time.timeScale -= Time.unscaledDeltaTime * timeTransitionSpeed;
         }
     }
 
-    public void HoldTimeScale() {
+    public void HoldTimeControl() {
         if (Time.timeScale > holdTimeScale)
         {
-            Time.timeScale -= Time.unscaledDeltaTime * transitionSpeed;
+            Time.timeScale -= Time.unscaledDeltaTime * timeTransitionSpeed;
         }
     }
 

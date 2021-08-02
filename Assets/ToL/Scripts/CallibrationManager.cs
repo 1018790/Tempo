@@ -91,7 +91,7 @@ public class CallibrationManager : MonoBehaviour
                         }
                         break;
                     case BreathingState.Exhale:
-                        timeManager.ResetTimeScale();
+                        timeManager.ExhaleTimeControl();
                         if (t < ExhaleTimeAvg)
                         {
                             t += Time.unscaledDeltaTime;

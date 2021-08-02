@@ -5,9 +5,11 @@ using UnityEngine.Events;
 
 public class SunFlowerController : MonoBehaviour
 {
+    public TimeManager timeManager;
     Animator anim;
     public Vector2 growingTimeRange;
     public UnityEvent OnCompletedGrowing;
+    private bool isStopping;
 
     private void OnEnable()
     {
@@ -17,19 +19,40 @@ public class SunFlowerController : MonoBehaviour
 
     IEnumerator StartGrowing() {
         yield return new WaitForSeconds(GetRandomTime());
-        anim.SetFloat("Speed",1);
+        anim.SetFloat("Speed", 1);
     }
 
     private float GetRandomTime() {
-        return Random.Range(growingTimeRange.x,growingTimeRange.y);
+        return Random.Range(growingTimeRange.x, growingTimeRange.y);
+    }
+
+    public void StopPlayAnim() {
+        isStopping = true;
+    }
+
+    public void CompletedGrowing() {
+        OnCompletedGrowing?.Invoke();
     }
 
     private void Update()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
-            Debug.Log("ss");
-            OnCompletedGrowing?.Invoke();
-            this.enabled = false;
+        switch (timeManager.state) {
+            case BreathingState.Inhale:
+                isStopping = false;
+                anim.SetFloat("Speed", timeManager.flowerDeGrowSpeed);
+                break;
+            case BreathingState.Hold:
+
+                break;
+            case BreathingState.Exhale:
+                if (!isStopping)
+                {
+                    anim.SetFloat("Speed", timeManager.flowerGrowSpeed);
+                }
+                else {
+                    anim.SetFloat("Speed", 0);
+                }
+                break;
         }
     }
 }
