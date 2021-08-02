@@ -2,6 +2,12 @@
 using Liminal.SDK.VR.Input;
 using System.Collections;
 using UnityEngine;
+public enum BreathingState
+{
+    Inhale,
+    Hold,
+    Exhale
+}
 
 public enum GameState { 
     PreStart,
@@ -12,10 +18,7 @@ public class CallibrationManager : MonoBehaviour
 {
     public TimeManager timeManager;
     public SpawnManager spawnManager;
-    public enum BreathingState { 
-        Inhale,
-        Exhale
-    }
+   
 
     public BreathingState breatheState;
     public GameState gameState;
@@ -75,7 +78,7 @@ public class CallibrationManager : MonoBehaviour
                 switch (breatheState)
                 {
                     case BreathingState.Inhale:
-                        timeManager.TimeSlowDown();
+                        //timeManager.TimeSlowDown();
                         if (t < InhaleTimeAvg)
                         {
                             Debug.Log("Slow time!");
@@ -88,7 +91,7 @@ public class CallibrationManager : MonoBehaviour
                         }
                         break;
                     case BreathingState.Exhale:
-                        timeManager.ResetTimeScale();
+                        timeManager.ExhaleTimeControl();
                         if (t < ExhaleTimeAvg)
                         {
                             t += Time.unscaledDeltaTime;
