@@ -36,13 +36,17 @@ public class SunFlowerController : MonoBehaviour
 
     private void Update()
     {
-        if (timeManager.canBreathe == false)
+        if (!timeManager.canBreathe)
         {
-            anim.SetFloat("Speed", 1);
+            if (anim.GetFloat("Speed") != 1) {
+                Debug.Log("ss");
+                anim.SetFloat("Speed", 1);
+                anim.updateMode = AnimatorUpdateMode.Normal;
+            }
         }
-
         else
         {
+            anim.updateMode = AnimatorUpdateMode.UnscaledTime;
             switch (timeManager.state)
             {
                 case BreathingState.Inhale:

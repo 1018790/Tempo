@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526187151}
-  m_IndirectSpecularColor: {r: 0.48572564, g: 0.6294951, b: 0.71832895, a: 1}
+  m_IndirectSpecularColor: {r: 0.21529987, g: 0.28213948, b: 0.32356918, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -397,6 +397,7 @@ MonoBehaviour:
   timeTransitionSpeed: 0.1
   flowerGrowSpeed: 1
   flowerDeGrowSpeed: -1
+  testTimeScale: 5
 --- !u!4 &116842623
 Transform:
   m_ObjectHideFlags: 0
@@ -2127,7 +2128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 582601526, guid: 50c29aa26da26294c87a2d570e8feb9d, type: 3}
       propertyPath: m_Gravity.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3933929893592961673, guid: 50c29aa26da26294c87a2d570e8feb9d,
         type: 3}
@@ -2332,7 +2333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 582601526, guid: 50c29aa26da26294c87a2d570e8feb9d, type: 3}
       propertyPath: m_Gravity.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3933929893592961673, guid: 50c29aa26da26294c87a2d570e8feb9d,
         type: 3}
@@ -2826,7 +2827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 582601526, guid: 50c29aa26da26294c87a2d570e8feb9d, type: 3}
       propertyPath: m_Gravity.x
-      value: 0
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3933929893592961673, guid: 50c29aa26da26294c87a2d570e8feb9d,
         type: 3}
