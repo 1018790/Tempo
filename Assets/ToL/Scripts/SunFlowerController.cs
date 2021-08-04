@@ -36,23 +36,33 @@ public class SunFlowerController : MonoBehaviour
 
     private void Update()
     {
-        switch (timeManager.state) {
-            case BreathingState.Inhale:
-                isStopping = false;
-                anim.SetFloat("Speed", timeManager.flowerDeGrowSpeed);
-                break;
-            case BreathingState.Hold:
+        if (timeManager.canBreathe == false)
+        {
+            anim.SetFloat("Speed", 1);
+        }
 
-                break;
-            case BreathingState.Exhale:
-                if (!isStopping)
-                {
-                    anim.SetFloat("Speed", timeManager.flowerGrowSpeed);
-                }
-                else {
-                    anim.SetFloat("Speed", 0);
-                }
-                break;
+        else
+        {
+            switch (timeManager.state)
+            {
+                case BreathingState.Inhale:
+                    isStopping = false;
+                    anim.SetFloat("Speed", timeManager.flowerDeGrowSpeed);
+                    break;
+                case BreathingState.Hold:
+
+                    break;
+                case BreathingState.Exhale:
+                    if (!isStopping)
+                    {
+                        anim.SetFloat("Speed", timeManager.flowerGrowSpeed);
+                    }
+                    else
+                    {
+                        anim.SetFloat("Speed", 0);
+                    }
+                    break;
+            }
         }
     }
 }

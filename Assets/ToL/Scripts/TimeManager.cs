@@ -77,12 +77,12 @@ public class TimeManager : MonoBehaviour
         }
         if (Input.GetKeyUp(timeScaleKey))
         {
-            
+            Time.timeScale = 10;
         }
     }
 
     public void BreatheJoin() {
-        canBreathe = true;
+        // canBreathe = true;
     }
 
     public void ExhaleTimeControl() {
