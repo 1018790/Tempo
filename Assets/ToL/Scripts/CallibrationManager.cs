@@ -2,12 +2,6 @@
 using Liminal.SDK.VR.Input;
 using System.Collections;
 using UnityEngine;
-public enum BreathingState
-{
-    Inhale,
-    Hold,
-    Exhale
-}
 
 public enum GameState { 
     PreStart,
