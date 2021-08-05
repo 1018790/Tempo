@@ -384,18 +384,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeScaleKey: 122
-  inhaleTimeScale: 0.5
+  inhaleTimeScale: 1
+  exhaleTimeScale: 2
   holdTimeScale: 0.15
   state: 0
+  phase: 0
   canBreathe: 0
-  inhaleTime: 4
-  currentInhaleTime: 0
   canHold: 0
-  holdTime: 7
-  currentHoldTime: 0
-  exhaleTime: 8
-  currentExhaleTime: 0
-  timeTransitionSpeed: 0.1
+  breathingPhase:
+  - phase: 0
+    inhaleTime: 4
+    currentInhaleTime: 0
+    holdTime: 5
+    currentHoldTime: 0
+    exhaleTime: 6
+    currentExhaleTime: 0
+    timeTransitionSpeed: 1
+  - phase: 1
+    inhaleTime: 4
+    currentInhaleTime: 0
+    holdTime: 6
+    currentHoldTime: 0
+    exhaleTime: 7
+    currentExhaleTime: 0
+    timeTransitionSpeed: 1
+  - phase: 2
+    inhaleTime: 4
+    currentInhaleTime: 0
+    holdTime: 7
+    currentHoldTime: 0
+    exhaleTime: 8
+    currentExhaleTime: 0
+    timeTransitionSpeed: 1
   Inhale_playOnce:
     m_PersistentCalls:
       m_Calls:
@@ -450,19 +470,10 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  Inhale_playUpdated:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  Exhale_playUpdated:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   flowerGrowSpeed: 1
   flowerDeGrowSpeed: -1
   testTimeScale: 5
+  testBreathingState: 1
 --- !u!4 &116842623
 Transform:
   m_ObjectHideFlags: 0
