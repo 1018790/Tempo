@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TimeManager : MonoBehaviour
 {
@@ -28,9 +29,22 @@ public class TimeManager : MonoBehaviour
 
     public float timeTransitionSpeed = 0.1f;
 
+
+    [Space, Header("PlayOnceAsset")]
+    public UnityEvent Inhale_playOnce;
+    public UnityEvent Exhale_playOnce;
+    private bool isPlaying;
+
+    [Space, Header("KeepUpdating")]
+    public UnityEvent Inhale_playUpdated;
+    public UnityEvent Exhale_playUpdated;
+
     [Space,Header("FlowerGrowSpeed")]
     public float flowerGrowSpeed = 1f;
     public float flowerDeGrowSpeed = -1f;
+
+    [Space,Header("TestValue"),SerializeField]
+    private float testTimeScale = 5f;
 
     
     void Update()
@@ -42,8 +56,10 @@ public class TimeManager : MonoBehaviour
                     {
                         currentInhaleTime += Time.unscaledDeltaTime;
                         InhaleTimeControl();
+                     
                     }
                     else {
+                        isPlaying = false;
                         if (canHold)
                             state = BreathingState.Hold;
                         else
@@ -67,8 +83,10 @@ public class TimeManager : MonoBehaviour
                     {
                         currentExhaleTime += Time.unscaledDeltaTime;
                         ExhaleTimeControl();
+                  
                     }
                     else {
+                        isPlaying = false;
                         state = BreathingState.Inhale;
                         currentExhaleTime = 0;
                     }
@@ -77,7 +95,8 @@ public class TimeManager : MonoBehaviour
         }
         if (Input.GetKeyUp(timeScaleKey))
         {
-            
+            Time.timeScale = testTimeScale;
+            canBreathe = false;
         }
     }
 
@@ -88,12 +107,26 @@ public class TimeManager : MonoBehaviour
     public void ExhaleTimeControl() {
         if (Time.timeScale < 1) {
             Time.timeScale += Time.unscaledDeltaTime * timeTransitionSpeed;
+            if (!isPlaying)
+            {
+                Exhale_playOnce?.Invoke();
+                Debug.Log("Exhale_Once");
+                isPlaying = true;
+            }
+            Exhale_playUpdated?.Invoke();
         }
     }
 
     public void InhaleTimeControl() {
         if (Time.timeScale > inhaleTimeScale) {
             Time.timeScale -= Time.unscaledDeltaTime * timeTransitionSpeed;
+            if (!isPlaying)
+            {
+                Inhale_playOnce?.Invoke();
+                Debug.Log("Inhale_Once");
+                isPlaying = true;
+            }
+            Inhale_playUpdated?.Invoke();
         }
     }
 
@@ -103,11 +136,4 @@ public class TimeManager : MonoBehaviour
             Time.timeScale -= Time.unscaledDeltaTime * timeTransitionSpeed;
         }
     }
-
-
-    //public void TimeSlowDown() {
-    //    Time.timeScale = timeScale;
-    //}
-
-    
 }

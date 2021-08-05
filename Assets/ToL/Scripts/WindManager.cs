@@ -7,7 +7,7 @@ public class WindManager : MonoBehaviour
 {
     [Header("Assets")]
     public ParticleSystem windEffect;
-    public Terrain mainTerrain;
+    //public Terrain mainTerrain;
     public WindZone windZone;
     public DynamicBone[] flowerbones;
 
@@ -30,8 +30,8 @@ public class WindManager : MonoBehaviour
     private bool canWind;
     private void OnEnable()
     {
-        mainTerrain.terrainData.wavingGrassStrength = 0.15f;
-        mainTerrain.terrainData.wavingGrassAmount = 0.25f;
+        //mainTerrain.terrainData.wavingGrassStrength = 0.15f;
+        //mainTerrain.terrainData.wavingGrassAmount = 0.25f;
         windEffect.transform.parent.gameObject.SetActive(false);
     }
 
@@ -52,14 +52,14 @@ public class WindManager : MonoBehaviour
             {
                 windZone.windTurbulence += Time.deltaTime * treeTransitionSpeed;
             }
-            if (mainTerrain.terrainData.wavingGrassStrength < grassWaveStrength)
-            {
-                mainTerrain.terrainData.wavingGrassStrength += Time.deltaTime * grassTransitionSpeed;
-            }
-            if (mainTerrain.terrainData.wavingGrassAmount < grassWaveBendForce)
-            {
-                mainTerrain.terrainData.wavingGrassAmount += Time.deltaTime * grassTransitionSpeed;
-            }
+            //if (mainTerrain.terrainData.wavingGrassStrength < grassWaveStrength)
+            //{
+            //    mainTerrain.terrainData.wavingGrassStrength += Time.deltaTime * grassTransitionSpeed;
+            //}
+            //if (mainTerrain.terrainData.wavingGrassAmount < grassWaveBendForce)
+            //{
+            //    mainTerrain.terrainData.wavingGrassAmount += Time.deltaTime * grassTransitionSpeed;
+            //}
 
             if (currentTimeToRain < timeToRain)
             {
