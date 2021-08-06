@@ -3942,7 +3942,7 @@ PrefabInstance:
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.20299995
       objectReference: {fileID: 0}
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
@@ -3989,6 +3989,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4685087709911286537, guid: 3c786bb262a04fe41bd691a028fd9def,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685087709911286537, guid: 3c786bb262a04fe41bd691a028fd9def,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685087709911286537, guid: 3c786bb262a04fe41bd691a028fd9def,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c786bb262a04fe41bd691a028fd9def, type: 3}
 --- !u!1001 &8784344146087364792
@@ -4016,7 +4031,7 @@ PrefabInstance:
     - target: {fileID: 8784344146598498744, guid: efc92815ce260d64ba3aa5218aca9776,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.203
       objectReference: {fileID: 0}
     - target: {fileID: 8784344146598498744, guid: efc92815ce260d64ba3aa5218aca9776,
         type: 3}
@@ -4062,6 +4077,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784344146598498375, guid: efc92815ce260d64ba3aa5218aca9776,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784344146598498375, guid: efc92815ce260d64ba3aa5218aca9776,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efc92815ce260d64ba3aa5218aca9776, type: 3}
