@@ -5,12 +5,28 @@ using TMPro;
 
 public class FrameRateDebug : MonoBehaviour
 {
-    int fps = 0;
+    public float updateInterval = 0.5F;
+    private double lastInterval;
+    private int frames;
+    private float fps;
+
     public TextMeshProUGUI frameRateText;
+    void Start()
+    {
+        lastInterval = Time.realtimeSinceStartup;
+        frames = 0;
+    }
+
     void Update()
     {
-        fps = (int)(1f / Time.unscaledDeltaTime);
-        frameRateText.text = fps.ToString();
-
+        ++frames;
+        float timeNow = Time.realtimeSinceStartup;
+        if (timeNow > lastInterval + updateInterval)
+        {
+            fps = (float)(frames / (timeNow - lastInterval));
+            frames = 0;
+            lastInterval = timeNow;
+        }
+        frameRateText.text = fps.ToString("f0");
     }
 }
