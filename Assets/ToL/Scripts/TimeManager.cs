@@ -53,7 +53,9 @@ public class TimeManager : MonoBehaviour
 
     [Space, Header("PlayOnceAsset")]
     public UnityEvent Inhale_playOnce;
+    public UnityEvent Hold_playOnce;
     public UnityEvent Exhale_playOnce;
+    public UnityEvent intialize;
     private bool isPlaying;
     private bool canGoNextPhase;
     [SerializeField]
@@ -66,6 +68,10 @@ public class TimeManager : MonoBehaviour
     [Space,Header("TestValue"),SerializeField]
     private float testTimeScale = 5f;
 
+    private void Start()
+    {
+        intialize?.Invoke();
+    }
 
     void Update()
     {
@@ -198,8 +204,10 @@ public class TimeManager : MonoBehaviour
         if (Time.realtimeSinceStartup > breathingPhase[_index].currentHoldTime)
         {
             //Completed
+            isPlaying = false;
             breathingPhase[_index].currentExhaleTime = Time.realtimeSinceStartup + breathingPhase[_index].exhaleTime;
             state = BreathingState.Exhale;
+
         }
         else
         {
@@ -208,11 +216,12 @@ public class TimeManager : MonoBehaviour
             //{
             //    Time.timeScale += Time.unscaledDeltaTime * breathingPhase[_index].timeTransitionSpeed;
             //}
-            //if (!isPlaying)
-            //{
-            //    Exhale_playOnce?.Invoke();
-            //    isPlaying = true;
-            //}
+            if (!isPlaying)
+            {
+                Hold_playOnce?.Invoke();
+                isPlaying = true;
+            }
+
         }
     }
 
