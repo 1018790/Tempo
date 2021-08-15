@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526187151}
-  m_IndirectSpecularColor: {r: 0.44543964, g: 0.58230823, b: 0.66230965, a: 1}
+  m_IndirectSpecularColor: {r: 0.44543976, g: 0.58230823, b: 0.66230977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -749,12 +749,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1001 &84864237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1341,12 +1335,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1 &155000076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1364,7 @@ RectTransform:
   m_GameObject: {fileID: 155000076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 37.55}
-  m_LocalScale: {x: 0.0061335997, y: 0.0061335997, z: 0.0061335997}
+  m_LocalScale: {x: 0.0285671, y: 0.0285671, z: 0.0285671}
   m_Children:
   - {fileID: 915250749}
   - {fileID: 1930124913}
@@ -1385,7 +1373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 7}
+  m_AnchoredPosition: {x: 0, y: 3.4163}
   m_SizeDelta: {x: 1379, y: 801}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155000078
@@ -1463,7 +1451,6 @@ MonoBehaviour:
   timeManager: {fileID: 116842622}
   petalParent: {fileID: 915250749}
   petals: []
-  fadeOutTime: 3
 --- !u!114 &157235867 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2457572474570891638, guid: 50c29aa26da26294c87a2d570e8feb9d,
@@ -1725,12 +1712,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!4 &193541875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 26a964c63c61a494397491ed6a38ac87,
@@ -2283,12 +2264,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1 &323526616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,12 +2913,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1001 &376377627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3301,12 +3270,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1001 &404759381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3486,12 +3449,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1001 &406852138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3762,12 +3719,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1001 &450830123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4026,12 +3977,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1 &456972429
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,12 +4356,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!4 &524086940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a2859b85daa7a1540a01dd5b9c483f66,
@@ -4519,12 +4458,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!4 &568375396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d65bab743f2ff0443a6703470e679152,
@@ -5592,12 +5525,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!4 &757273711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d65bab743f2ff0443a6703470e679152,
@@ -5783,12 +5710,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!4 &777224376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d65bab743f2ff0443a6703470e679152,
@@ -7846,12 +7767,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!114 &1045391641 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7202289352051087991, guid: 50c29aa26da26294c87a2d570e8feb9d,
@@ -8049,12 +7964,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!4 &1088391460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a2859b85daa7a1540a01dd5b9c483f66,
@@ -8686,12 +8595,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1 &1171045849
 GameObject:
   m_ObjectHideFlags: 0
@@ -8969,12 +8872,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!4 &1201681565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 26a964c63c61a494397491ed6a38ac87,
@@ -10811,9 +10708,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310632027}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.547}
-  m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10.99}
+  m_LocalScale: {x: 0.018421367, y: 0.021805547, z: 0.029644422}
   m_Children:
   - {fileID: 1560631693}
   - {fileID: 1824397630}
@@ -10822,10 +10719,10 @@ RectTransform:
   m_Father: {fileID: 163395153}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.7}
-  m_SizeDelta: {x: 1379, y: 801}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.29184, y: 1.13}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1310632029
 MonoBehaviour:
@@ -10977,12 +10874,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1 &1342074757
 GameObject:
   m_ObjectHideFlags: 0
@@ -11073,12 +10964,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1001 &1343220098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13813,12 +13698,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!1 &1786992038
 GameObject:
   m_ObjectHideFlags: 0
@@ -14718,12 +14597,6 @@ MonoBehaviour:
   petalMaster: {fileID: 155000081}
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
-  OnFadeInCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  index: 0
 --- !u!4 &2000969763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: d65bab743f2ff0443a6703470e679152,
@@ -15510,7 +15383,7 @@ PrefabInstance:
     - target: {fileID: 4685087709911286537, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
       propertyPath: lengthInSec
-      value: 7.8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4685087709911286537, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
@@ -15609,7 +15482,7 @@ PrefabInstance:
     - target: {fileID: 8784344146598498375, guid: efc92815ce260d64ba3aa5218aca9776,
         type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8784344146598498375, guid: efc92815ce260d64ba3aa5218aca9776,
         type: 3}
@@ -15810,6 +15683,16 @@ PrefabInstance:
         type: 3}
       propertyPath: TrailModule.colorOverTrail.maxColor.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784344146598498375, guid: efc92815ce260d64ba3aa5218aca9776,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784344146598498375, guid: efc92815ce260d64ba3aa5218aca9776,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8784344146598498744, guid: efc92815ce260d64ba3aa5218aca9776,
         type: 3}
