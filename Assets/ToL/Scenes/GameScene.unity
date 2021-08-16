@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526187151}
-  m_IndirectSpecularColor: {r: 0.44482112, g: 0.58211935, b: 0.66210306, a: 1}
+  m_IndirectSpecularColor: {r: 0.44543964, g: 0.58230823, b: 0.66230965, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1091,6 +1091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1001 &84864237
@@ -1346,6 +1347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &107155781
@@ -1983,6 +1985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &130478641
@@ -2217,6 +2220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1 &155000076
@@ -2254,7 +2258,7 @@ RectTransform:
   - {fileID: 915250749}
   - {fileID: 1930124913}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2335,7 +2339,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeManager: {fileID: 116842622}
   petalParent: {fileID: 915250749}
+  petalGlowParent: {fileID: 1023478347}
   petals: []
+  petalGlows: []
 --- !u!114 &157235867 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2457572474570891638, guid: 50c29aa26da26294c87a2d570e8feb9d,
@@ -2486,7 +2492,6 @@ Transform:
   - {fileID: 1659141167}
   - {fileID: 1371999438}
   - {fileID: 1353449154}
-  - {fileID: 456972433}
   - {fileID: 155000077}
   - {fileID: 1310632028}
   - {fileID: 635225015}
@@ -2598,6 +2603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!4 &193541875 stripped
@@ -5250,6 +5256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1 &323526616
@@ -5905,6 +5912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1001 &376377627
@@ -6136,6 +6144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &397730533
@@ -6352,6 +6361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1001 &404759381
@@ -6531,6 +6541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1001 &406852138
@@ -6673,6 +6684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &410670429
@@ -6891,6 +6903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1001 &450830123
@@ -6934,7 +6947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1e3fa893d760184c9266c1ce82dde9e, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1e3fa893d760184c9266c1ce82dde9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7503,6 +7516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1 &454057603
@@ -7556,6 +7570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &454057606
@@ -7595,105 +7610,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454057603}
   m_CullTransparentMesh: 0
---- !u!1 &456972429
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 456972433}
-  - component: {fileID: 456972432}
-  - component: {fileID: 456972431}
-  - component: {fileID: 456972430}
-  m_Layer: 5
-  m_Name: OverlayThing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &456972430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456972429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &456972431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456972429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
---- !u!223 &456972432
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456972429}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 1656371384}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &456972433
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 456972429}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1036615316}
-  m_Father: {fileID: 163395153}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1001 &463552064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9028,6 +8944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!4 &524086940 stripped
@@ -9130,6 +9047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1001 &565362093
@@ -9803,7 +9721,7 @@ Transform:
   - {fileID: 865318878}
   - {fileID: 1022940681}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &635484310
 GameObject:
@@ -9942,7 +9860,7 @@ PrefabInstance:
     - target: {fileID: 1260162969423114810, guid: 22276a8657744e04cba8ad0a2caf4195,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1260162969423114810, guid: 22276a8657744e04cba8ad0a2caf4195,
         type: 3}
@@ -10518,7 +10436,7 @@ Transform:
   m_LocalScale: {x: 187.08072, y: 187.08072, z: 187.08072}
   m_Children: []
   m_Father: {fileID: 163395153}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &661708133
 PrefabInstance:
@@ -12053,6 +11971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!4 &757273711 stripped
@@ -12238,6 +12157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1 &762979650
@@ -12270,7 +12190,7 @@ Transform:
   - {fileID: 835421219}
   - {fileID: 1171045850}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &770164943
 PrefabInstance:
@@ -13824,7 +13744,7 @@ Transform:
   m_Children:
   - {fileID: 2008165685}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &830873902 stripped
 MonoBehaviour:
@@ -14783,6 +14703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &915930895
@@ -14849,7 +14770,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955382289}
   m_LocalRotation: {x: 0.12740102, y: -0, z: -0, w: 0.99185133}
-  m_LocalPosition: {x: 0, y: 0, z: 1.59}
+  m_LocalPosition: {x: 0, y: 0, z: 0.69}
   m_LocalScale: {x: 0.17673968, y: 0.20920844, z: 0.28441676}
   m_Children:
   - {fileID: 2045760927}
@@ -14858,7 +14779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 14.639001, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.29184, y: -2.32}
+  m_AnchoredPosition: {x: 0.29, y: -1.05}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955382291
@@ -15248,7 +15169,7 @@ Transform:
   - {fileID: 844897014}
   - {fileID: 1953669937}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1006791117 stripped
 Transform:
@@ -15400,7 +15321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1023478347}
   m_Layer: 5
-  m_Name: Petals (1)
+  m_Name: Petals_Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15488,7 +15409,7 @@ Transform:
   - {fileID: 1820591303}
   - {fileID: 514810697}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1034138522 stripped
 MonoBehaviour:
@@ -15502,80 +15423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1036615315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1036615316}
-  - component: {fileID: 1036615318}
-  - component: {fileID: 1036615317}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1036615316
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036615315}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 456972433}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1275, y: 644}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1036615317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036615315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.37254903}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &1036615318
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036615315}
-  m_CullTransparentMesh: 0
 --- !u!1001 &1037103837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15759,6 +15606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1045391641 stripped
@@ -15956,6 +15804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!4 &1088391460 stripped
@@ -16565,6 +16414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1112264797
@@ -17031,6 +16881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1 &1171045849
@@ -17308,6 +17159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!4 &1201681565 stripped
@@ -19575,7 +19427,7 @@ Transform:
   - {fileID: 1257000694}
   - {fileID: 1482422540}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1253686632
 PrefabInstance:
@@ -20474,6 +20326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1266216919
@@ -21351,7 +21204,7 @@ RectTransform:
   - {fileID: 1387462612}
   - {fileID: 76536761}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22208,6 +22061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1 &1342074757
@@ -22298,6 +22152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1001 &1343220098
@@ -22446,6 +22301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1347773015
@@ -23677,6 +23533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1455823851
@@ -23767,6 +23624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1459669762
@@ -26803,7 +26661,7 @@ Transform:
   - {fileID: 491135493}
   - {fileID: 1298838904}
   m_Father: {fileID: 163395153}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1630206536 stripped
 MonoBehaviour:
@@ -26860,7 +26718,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 163395153}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -102.59801, z: 0}
 --- !u!1001 &1635713219
 PrefabInstance:
@@ -26972,12 +26830,6 @@ GameObject:
 --- !u!4 &1656371383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1260162969970794164, guid: 22276a8657744e04cba8ad0a2caf4195,
-    type: 3}
-  m_PrefabInstance: {fileID: 636534916}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &1656371384 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1260162969970794154, guid: 22276a8657744e04cba8ad0a2caf4195,
     type: 3}
   m_PrefabInstance: {fileID: 636534916}
   m_PrefabAsset: {fileID: 0}
@@ -27192,6 +27044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1664433872
@@ -27446,7 +27299,7 @@ Transform:
   m_LocalScale: {x: 198.30556, y: 198.30556, z: 198.30556}
   m_Children: []
   m_Father: {fileID: 163395153}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1726884542
 GameObject:
@@ -27499,6 +27352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1726884545
@@ -27656,6 +27510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!1 &1786992038
@@ -28066,6 +27921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1835291576
@@ -28857,6 +28713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1958159975
@@ -28965,6 +28822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1975518085
@@ -29055,6 +28913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &1977862912
@@ -29625,6 +29484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 0
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!4 &2000969763 stripped
@@ -30487,6 +30347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &2035091318
@@ -30577,6 +30438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &2042398024
@@ -30747,6 +30609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &2048936033
@@ -30843,6 +30706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   petalMaster: {fileID: 155000081}
+  type: 1
   fadeInTime: 0.19
   fadeOutTime: 0.2857143
 --- !u!114 &2055677734

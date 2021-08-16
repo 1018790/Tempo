@@ -9,6 +9,7 @@ public class Petal : MonoBehaviour
 {
     [SerializeField]
     private SunflowerPetalsFading petalMaster;
+    public int type;
     public float fadeInTime = 0.19f;
     public float fadeOutTime = 0.28f;
     Image thisImage;
@@ -28,14 +29,14 @@ public class Petal : MonoBehaviour
     IEnumerator FadeIn() { 
         thisImage.CrossFadeAlpha(1,fadeInTime,false);
         yield return new WaitForSeconds(fadeInTime);
-        petalMaster.AddIndex();
+        petalMaster.AddIndex(type);
         //OnFadeInCompleted?.Invoke();
     }
 
     IEnumerator FadeOut() {
         thisImage.CrossFadeAlpha(0, fadeOutTime, false);
         yield return new WaitForSeconds(fadeOutTime);
-        petalMaster.DecreaseIndex();
+        petalMaster.DecreaseIndex(type);
     }
 
 }
