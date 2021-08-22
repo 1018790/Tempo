@@ -1073,6 +1073,30 @@ MonoBehaviour:
   petalGlowParent: {fileID: 1023478347}
   petals: []
   petalGlows: []
+  cycleCounter: 0
+  cyclesToWind: 5
+  cyclesToRain: 20
+  OnWind:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 865318879}
+        m_MethodName: WindJoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnRain:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &157235867 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2457572474570891638, guid: 50c29aa26da26294c87a2d570e8feb9d,
@@ -3739,7 +3763,7 @@ MonoBehaviour:
   grassWaveSpeed: 0.6
   grassWaveBendForce: 0.4
   grassTransitionSpeed: 0.02
-  timeToRain: 5
+  timeToRain: 10
   OnRain:
     m_PersistentCalls:
       m_Calls:

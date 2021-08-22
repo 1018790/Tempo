@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] flowers;
 
     public void ActivateFlower() {
-        flowerParent.SetActive(true);
+        //flowerParent.SetActive(true);
     }
 
 }

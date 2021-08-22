@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Events;
 
 public class SunflowerPetalsFading : MonoBehaviour
 {
@@ -19,6 +20,13 @@ public class SunflowerPetalsFading : MonoBehaviour
     private int petalGlowIndex;
     private bool isFading;
 
+    public int cycleCounter;
+    public int cyclesToWind = 5;
+    public int cyclesToRain = 20;
+    public UnityEvent OnWind;
+    public UnityEvent OnRain;
+
+
     void Start()
     {
         petals = new GameObject[petalParent.childCount];
@@ -33,6 +41,7 @@ public class SunflowerPetalsFading : MonoBehaviour
 
         Array.Reverse(petals);
         Array.Reverse(petalGlows);
+        cycleCounter = 0;
     }
 
     public void AddIndex(int _type) {
@@ -92,6 +101,12 @@ public class SunflowerPetalsFading : MonoBehaviour
                 case BreathingState.Exhale:
                     if (isFading)
                     {
+                        cycleCounter += 1;
+                        if (cycleCounter == cyclesToWind) {
+                            OnWind?.Invoke();
+                        } else if (cycleCounter == cyclesToRain) {
+                            OnRain?.Invoke();
+                        }
                         petals[petalIndex].GetComponent<Petal>().FadeOutFunction();
                         petalGlows[petalGlowIndex].GetComponent<Petal>().FadeOutFunction();
                         isFading = false;
