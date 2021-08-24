@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 85cf0b004bc4a654b9e501efcce47902, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d31664a495365994c9dc7d75392ebf7f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526187151}
-  m_IndirectSpecularColor: {r: 0.4453411, g: 0.5835731, b: 0.6597098, a: 1}
+  m_IndirectSpecularColor: {r: 0.20736158, g: 0.17246076, b: 0.21850592, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7145,6 +7145,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1e3fa893d760184c9266c1ce82dde9e, type: 3}
       propertyPath: m_Name
       value: ReflectionWater
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1e3fa893d760184c9266c1ce82dde9e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1e3fa893d760184c9266c1ce82dde9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23603,7 +23607,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.64744824, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -28768,7 +28772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1974004595
 Transform:
   m_ObjectHideFlags: 0
@@ -29035,7 +29039,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.9914985, b: 0.2688679, a: 1}
+      maxColor: {r: 1, g: 0.6489398, b: 0.27058828, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -34503,8 +34507,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0, g: 0.6250951, b: 1, a: 1}
-      maxColor: {r: 0.21915412, g: 1, b: 0, a: 1}
+      minColor: {r: 1, g: 0.28953755, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.7241974, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
