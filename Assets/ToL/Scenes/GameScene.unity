@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1526187151}
-  m_IndirectSpecularColor: {r: 0.20736158, g: 0.17246076, b: 0.21850592, a: 1}
+  m_IndirectSpecularColor: {r: 0.20718655, g: 0.17244741, b: 0.21857995, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -180,8 +180,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Breathe in time with the flow of the land and allow yourself to let go of
-    your surroundings.
+  m_text: Breathe, and allow yourself to let go of your surroundings.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f879091e60b3e245baf8a1f1b8e4714, type: 2}
   m_sharedMaterial: {fileID: -6883793645892017655, guid: 5f879091e60b3e245baf8a1f1b8e4714,
@@ -13903,6 +13902,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: f1e3fa893d760184c9266c1ce82dde9e, type: 3}
       propertyPath: m_Name
       value: PlanarFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f1e3fa893d760184c9266c1ce82dde9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f1e3fa893d760184c9266c1ce82dde9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28226,7 +28229,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: This experience is about to end.
+  m_text: This experience is about to come to an end.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f879091e60b3e245baf8a1f1b8e4714, type: 2}
   m_sharedMaterial: {fileID: -6883793645892017655, guid: 5f879091e60b3e245baf8a1f1b8e4714,
@@ -33979,7 +33982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2045760927
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39483,7 +39486,7 @@ PrefabInstance:
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.068
+      value: -0.0736
       objectReference: {fileID: 0}
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
@@ -39493,7 +39496,7 @@ PrefabInstance:
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.070753105
       objectReference: {fileID: 0}
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
@@ -39508,7 +39511,7 @@ PrefabInstance:
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99749386
       objectReference: {fileID: 0}
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
@@ -39518,7 +39521,7 @@ PrefabInstance:
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 8.114
       objectReference: {fileID: 0}
     - target: {fileID: 4685087709911286538, guid: 3c786bb262a04fe41bd691a028fd9def,
         type: 3}
