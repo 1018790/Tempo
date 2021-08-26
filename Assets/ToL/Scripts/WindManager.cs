@@ -9,7 +9,7 @@ public class WindManager : MonoBehaviour
     public ParticleSystem windEffect;
     //public Terrain mainTerrain;
     public WindZone windZone;
-    public DynamicBone[] flowerbones;
+    //public DynamicBone[] flowerbones;
 
     [Header("WindZoneValues_Tree")]
     public float windZoneStrength = 3.5f;
@@ -39,10 +39,10 @@ public class WindManager : MonoBehaviour
     {
         if (canWind) {
             windEffect.transform.parent.gameObject.SetActive(true);
-            for (int i = 0; i < flowerbones.Length; i++)
-            {
-                flowerbones[i].enabled = true;
-            }
+            //for (int i = 0; i < flowerbones.Length; i++)
+            //{
+            //    flowerbones[i].enabled = true;
+            //}
 
             if (windZone.windMain < windZoneStrength)
             {

@@ -968,8 +968,8 @@ MonoBehaviour:
   petalGlows: []
   cycleCounter: 0
   cyclesToWind: 7
-  cyclesToRain: 14
-  cyclesToRainbow: 21
+  cyclesToRain: 12
+  cyclesToRainbow: 16
   OnWind:
     m_PersistentCalls:
       m_Calls:
@@ -3099,7 +3099,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822302222}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -3175,10 +3175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windEffect: {fileID: 1104473015}
   windZone: {fileID: 1633243444}
-  flowerbones:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   windZoneStrength: 3.5
   windZoneTurbulence: 1
   treeTransitionSpeed: 0.1
@@ -3586,7 +3582,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022940680}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d89775360b12534da99b25f244bf1e7, type: 3}
   m_Name: 
@@ -4603,7 +4599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1387462612
 RectTransform:
   m_ObjectHideFlags: 0
