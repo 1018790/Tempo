@@ -29,14 +29,14 @@ public class Petal : MonoBehaviour
     IEnumerator FadeIn() { 
         thisImage.CrossFadeAlpha(1,fadeInTime,false);
         yield return new WaitForSeconds(fadeInTime);
-        petalMaster.AddIndex(type);
+        petalMaster.AddIndex();
         //OnFadeInCompleted?.Invoke();
     }
 
     IEnumerator FadeOut() {
         thisImage.CrossFadeAlpha(0, fadeOutTime, false);
         yield return new WaitForSeconds(fadeOutTime);
-        petalMaster.DecreaseIndex(type);
+        petalMaster.DecreaseIndex();
     }
 
 }
